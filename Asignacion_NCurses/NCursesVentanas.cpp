@@ -1,0 +1,61 @@
+#include <curses.h>
+WINDOW *ventanaPrincipal;
+WINDOW *ventanaBox1;
+WINDOW *ventanaBox2;
+WINDOW *ventanaBox3;
+WINDOW *ventanaBox4;
+int main(){
+    int MaxY, MaxX;
+    initscr();
+    getmaxyx(stdscr, MaxY, MaxX);
+    if (!has_colors()){
+        endwin();
+        return 1;
+    } // Fin If
+    cbreak();
+    noecho();
+    nonl();
+    intrflush(ventanaPrincipal, FALSE);
+    keypad(ventanaPrincipal, TRUE);
+    start_color();
+    init_pair(1, COLOR_WHITE, COLOR_MAGENTA);
+    ventanaPrincipal = newwin(MaxY, MaxX, 0, 0);
+    ventanaBox1 = newwin(MaxY / 2, MaxX / 2, 0, 0);
+    ventanaBox2 = newwin(MaxY / 2, MaxX / 2, 0, MaxX / 2);
+    ventanaBox3 = newwin(MaxY / 2, MaxX / 2, MaxY / 2, 0);
+    ventanaBox4 = newwin(MaxY / 2, MaxX / 2, MaxY / 2, MaxX / 2);
+    wbkgd(ventanaPrincipal, COLOR_PAIR(1));
+    wbkgd(ventanaBox1, COLOR_PAIR(1));
+    wbkgd(ventanaBox2, COLOR_PAIR(1));
+    wbkgd(ventanaBox3, COLOR_PAIR(1));
+    wbkgd(ventanaBox4, COLOR_PAIR(1));
+    refresh();
+    touchwin(ventanaPrincipal);
+    wrefresh(ventanaPrincipal);
+    box(ventanaBox1, 0, 0);
+    touchwin(ventanaBox1);
+    wrefresh(ventanaBox1);
+    box(ventanaBox2, 0, 0);
+    getchar();
+    wclear(ventanaBox1);
+    wrefresh(ventanaBox1);
+    touchwin(ventanaBox2);
+    wrefresh(ventanaBox2);
+    box(ventanaBox3, 0, 0);
+    getchar();
+    wclear(ventanaBox2);
+    wrefresh(ventanaBox2);
+    touchwin(ventanaBox3);
+    wrefresh(ventanaBox3);
+    box(ventanaBox4, 0, 0);
+    getchar();
+    wclear(ventanaBox3);
+    wrefresh(ventanaBox3);
+    touchwin(ventanaBox4);
+    wrefresh(ventanaBox4);
+    getchar();
+    wclear(ventanaBox4);
+    wrefresh(ventanaBox4);
+    endwin();
+    return 0;
+} // Fin Main
