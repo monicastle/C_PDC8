@@ -29,7 +29,29 @@ Punto de Control #08 en **C++** diseñado para demostrar:
 
 ---
 
+## :yellow_circle: NCursesVentanas.cpp
 
+![](Images/NCursesVentanas.png)
+
+## :orange_circle: Salida Terminal
+
+Se crean 4 ventanas las cuales al tocarse una tecla se van mostrando una por una, estan distribuidas equitativamente alrededor de toda la terminal.
+
+## :red_circle: Salida Ventana 1
+
+![](Images/Salida1.jpeg)
+
+## :red_circle: Salida Ventana 2
+
+![](Images/Salida2.jpeg)
+
+## :red_circle: Salida Ventana 3
+
+![](Images/Salida3.jpeg)
+
+## :red_circle: Salida Ventana 4
+
+![](Images/Salida4.jpeg)
 
 ---
 
