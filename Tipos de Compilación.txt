@@ -1,0 +1,7 @@
+Existen tres tipos de compilación:
+
+1- Compilación Normal: consiste en que primero se hace una revision al programa (comando g++), si el programa no encuentra ningún error se crea un ejecutable de este. 
+
+2- Compilación Compartida: consiste en que dos o mas programas comparten la misma de compilacion, compilandose todos los programas a la vez.
+
+3- Compilación Estática: consiste en que hay una libreria estatica, la cual se compila provcando una compilación estatica.
